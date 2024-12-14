@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Anushka Nim</title>
+<link rel="icon" type="ICO File (.ico)" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+
+.top{
+  
+  background-color: pink; /* For browsers that do not support gradients */
+  background-image: linear-gradient( lavender,beige);
+border-style: dotted solid;
+}
+
+
+#showMessageButton{
+  background-image: url('https://tools.corenexis.com/image/cnxm/M24/12/7645a5125e.webp');
+}
+
+ body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #fullScreenMessage {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            font-size: 2rem;
+        }
+
+        #showMessageButton {
+            margin: 30px;
+            padding: 10px 10px;
+            color: purple;
+            background-color:violet;
+            font-size: 1.5rem;
+            border:2px solid purple;
+ font-weight: bold;
+            cursor: pointer;
+text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7);
+        }
+#showMessageButton:hover {transform: scale(1.1);}
+
+h3{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+   h3{
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(90deg,yellow,green 
+        
+      );
+      background-size: 200%;
+      color: transparent;
+      -webkit-background-clip: text;
+      animation: glitter 5s linear infinite, moveText 10s linear infinite;
+    }
+
+    @keyframes glitter {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    @keyframes moveText {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+h1 {
+  color: #6a4e23;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+img {
+    border-radius: 50%;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background: #a2d5f2; /* Soft gradient background */
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    border-right: 20px  ;
+}
+
+.top {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 10px solid #a2d5f2;
+    background-color: #ffdcbf; /* Pastel Orange */
+    padding: 20px;
+    border-radius: 50px;
+margin:10px;
+}
+
+.bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #b5e7a0; /* Pastel Green */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 50px;
+border-style: dotted solid;
+margin:10px;
+
+}
+
+.right {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #a2d5f2; /* Pastel Blue */
+    padding: 20px;
+    border-radius: 50px;
+
+}
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 100%);
+    border-radius: 50%;
+    animation: rise 5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(100%);
+        opacity: 0.8;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50vh);
+        opacity: 0;
+    }
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.burst {
+    animation: pop 0.5s forwards;
+}
+
+/* Styles for 2025 text */
+#yearText {
+    position: absolute;
+    bottom: 30px;
+    left: 350px;
+    font-size: 100px;
+    font-weight: bold;
+    color:darkgreen;
+    opacity: 80;
+    transform: scale(0);
+    animation: fadeInScaleUp 2s forwards;
+}
+
+@keyframes fadeInScaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Train Animation */
+#train {
+    position: absolute;
+    bottom: 20px;
+    left: -200px;
+    width: 150px;
+    height: 100px;
+    background-color:#a2d5f2 ;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:blue;
+    font-weight: bold;
+    font-size: 30px;
+    animation: moveTrain 10s linear forwards;
+}
+
+@keyframes moveTrain {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Button styling */
+button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d94f2f;
+}
+
+/* Countdown changes when nearing expiration */
+#demo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Color transition as countdown nears expiration */
+.countdown-near-expiry {
+    color: red;
+    text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.7);
+}
+
+    </style>
+</head>
+<body>
+
+<button id="showMessageButton">Preview</button>
+
+    <div id="fullScreenMessage">
+        <p>HAPPY  NEW  YEAR !....</p>
+        <button id="closeMessageButton">back</button>
+    </div>
+
+    <script>
+        const showMessageButton = document.getElementById('showMessageButton');
+        const fullScreenMessage = document.getElementById('fullScreenMessage');
+        const closeMessageButton = document.getElementById('closeMessageButton');
+
+        showMessageButton.addEventListener('click', () => {
+            fullScreenMessage.style.display = 'flex';
+        });
+
+        closeMessageButton.addEventListener('click', () => {
+            fullScreenMessage.style.display = 'none';
+        });
+
+        // Optional: Close message on clicking outside the content
+        fullScreenMessage.addEventListener('click', (event) => {
+            if (event.target === fullScreenMessage) {
+                fullScreenMessage.style.display = 'none';
+            }
+        });
+    </script>
+     
+
+<p id="demo3"></p>
+
+
+
+    <div class="left">
+        <div class="top">
+            <h1>New Year Countdown</h1>
+            <p id="demo"></p> <!-- The countdown is now below the heading -->
+        
+            <br><h2></h2></br>
+            <h2>SURPRISE&#127882;</h2>
+            <p></p>
+
+            <button type="button" onclick="myFunction()">Tap to unlock</button>
+
+            <p id="demo1">with love</p>
+        </div>
+
+        <div class="bottom"><h3>Surprise Awaits at Midnight!</h3></div>
+    </div>
+
+    <div class="right">
+        <img src="https://tools.corenexis.com/image/cnxm/M24/12/34f34de2f5.webp" width=300 height=375 alt="image">
+        <h2>ANUSHKA NIM</h2>
+        <p><i><br>A Y24 Pursuing BS Chemistry at IIT Kanpur, with a zeal for learning</br><br>- Creative Soul | Passionate about technology, design, and innovation
+</br><br>- Familiar with Python and SQL</br></i></p>
+    </div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+var countdownEnded = false; // Track if countdown has ended
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // Change countdown color when it's nearing expiration
+  if (distance < 10000) {
+    document.getElementById("demo").classList.add("countdown-near-expiry");
+  }
+
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "WELCOME 2025";
+    countdownEnded = true; // Mark countdown as ended
+    showYearText(); // Show "2025" text when countdown ends
+    showTrain(); // Start the train animation when countdown ends
+  }
+}, 1000);
+
+function myFunction() { 
+  if (countdownEnded) {
+    document.getElementById("demo1").innerHTML = "Wishing you a year filled with achievements and newopportunities. <br><b>Happy New Year!";
+    document.getElementById("demo1").style.fontSize = "25px"; 
+    document.getElementById("demo1").style.color = "brown";
+    document.getElementById("demo1").style.backgroundColor = "";      
+    startBubbles();
+  } else {
+    alert("Please wait until the countdown ends!");
+  }
+}
+
+function startBubbles() {
+  const bottomDiv = document.querySelector('.bottom');
+
+  setInterval(() => {
+    const bubble = document.createElement('div');
+    bubble.classList.add('bubble');
+    bubble.style.left = Math.random() * 100 + '%';
+    bubble.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+    bottomDiv.appendChild(bubble);
+
+    bubble.addEventListener('animationend', () => {
+      if (Math.random() < 0.3) {
+        bubble.classList.add('burst');
+        setTimeout(() => bubble.remove(), 500);
+      } else {
+        bubble.remove();
+      }
+    });
+  }, 500);
+}
+
+function showYearText() {
+  const yearText = document.createElement('div');
+  yearText.id = 'yearText';
+  yearText.innerText = '2025';
+  document.body.appendChild(yearText);
+}
+
+function showTrain() {
+  const train = document.createElement('div');
+  train.id = 'train';
+  train.innerText = '2024';
+  document.body.appendChild(train);
+}
+
+</script>
+
+</body>
+</html>
